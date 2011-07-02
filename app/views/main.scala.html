@@ -1,0 +1,55 @@
+@(title:String = "", tab:String = "")(body: => Html)
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html>
+    <head>
+        <title>@title - Utah Scala Enthusiasts</title>
+        <link rel="stylesheet" media="screen" href="@asset("public/stylesheets/main.css")">
+        <link rel="shortcut icon" type="image/png" href="@asset("public/images/favicon.png")">
+        <link href='http://fonts.googleapis.com/css?family=Architects+Daughter&v1' rel='stylesheet' type='text/css'>
+        <script src="@asset("public/javascripts/jquery-1.5.2.min.js")" type="text/javascript"></script>
+    </head>
+    <body>
+    	<div id='wrapper'>
+    		<div id='top'>
+    			<img style='float: left' src='@asset("public/images/logo.png")' width='62' height='62'/>
+	    		<h1>Utah Scala <span>.org</span></h1>
+	    		<div class='tag'>Home of the Utah Scala Enthusiasts</div>
+    		</div>
+    		
+    		@{
+    			import controllers.Site
+    			val items = List(
+    				("home", 		action(Site.index), 		"Home"),
+    				("calendar", 	action(Site.calendar), 	"Calendar"),
+    				("presentations", action(Site.presentations), 	"Presentations"),
+    				("sponsors", 	action(Site.sponsors), 		"Sponsors"),
+    				("aboutus", 	action(Site.aboutus), 		"About Us")
+    			)
+    			play.templates.Html(
+	    			<ul id='main-menu'>
+	    				{for (i <- items) yield 
+	    					<li class={if (i._1 == tab) "selected" else null}><a href={i._2}>{i._3}</a></li>
+	    				}
+	    			</ul>.toString
+    			)
+    		}
+    		
+	    	<div id='main'>
+	    	
+	    		<div id='content'>
+	    		
+	        		@body
+	        
+	        	</div>
+	        	
+	        </div>
+        
+        	<div id='bottom'>
+        		Powered by <a href="http://www.scala-lang.org">Scala</a> and the <a href="http://www.playframework.org">Play! Framework</a> - &copy; 2011 Alvaro Carrasco
+        	</div>
+        </div>
+        
+    </body>
+</html>

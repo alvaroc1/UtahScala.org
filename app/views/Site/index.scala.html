@@ -1,0 +1,94 @@
+@main("Home", "home") {
+
+	<h2>Welcome!</h2>
+	
+	@rightblock("Meetings") {
+		<div style='margin-bottom: 15px'>
+			<div style='font-weight: bold'>Meeting Days and Time:</div>
+			<div>First Thursday of the month at 6:30pm.</div>
+		</div>
+		
+		<div style='margin-bottom: 15px'>
+			<div style='font-weight: bold'>Meeting Location: </div>
+			<div>
+				<address>
+				<a href='http://www.sendoutcards.com'>SendOutCards</a><br/>
+				1825 West Research Way<br/>
+				Salt Lake City, UT 84119
+				</address>
+				[<a href='http://goo.gl/maps/E7li' target='_BLANK'>Map</a>]
+			</div>
+			<!-- 
+			<iframe width="300" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;q=sendoutcards&amp;aq=&amp;sll=40.700032,-111.878672&amp;sspn=0.029152,0.062656&amp;ie=UTF8&amp;st=109146043351405611748&amp;rq=1&amp;ev=zi&amp;split=1&amp;radius=1.97&amp;hq=sendoutcards&amp;hnear=&amp;ll=40.699823,-111.880928&amp;spn=0.029149,0.062656&amp;z=14&amp;iwloc=A&amp;cid=11339967899135037015&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;q=sendoutcards&amp;aq=&amp;sll=40.700032,-111.878672&amp;sspn=0.029152,0.062656&amp;ie=UTF8&amp;st=109146043351405611748&amp;rq=1&amp;ev=zi&amp;split=1&amp;radius=1.97&amp;hq=sendoutcards&amp;hnear=&amp;ll=40.699823,-111.880928&amp;spn=0.029149,0.062656&amp;z=14&amp;iwloc=A&amp;cid=11339967899135037015" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+    		-->
+    	</div>
+    }
+    
+    <div style='float: right; clear: right; padding: 10px'>
+		<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+		<script>
+		new TWTR.Widget({
+		  version: 2,
+		  type: 'profile',
+		  rpp: 4,
+		  interval: 6000,
+		  width: 270,
+		  height: 300,
+		  theme: {
+		    shell: {
+		      background: '#ffbe3d',
+		      color: '#6b4308'
+		    },
+		    tweets: {
+		      background: '#ffffff',
+		      color: '#543d02',
+		      links: '#2131e0'
+		    }
+		  },
+		  features: {
+		    scrollbar: false,
+		    loop: false,
+		    live: false,
+		    hashtags: true,
+		    timestamp: true,
+		    avatars: false,
+		    behavior: 'all'
+		  }
+		}).render().setUser('USEScala').start();
+		</script>
+    </div>
+    
+    
+	<p>Thanks for stopping by the official Utah Scala Enthusiasts home page.  The Use.Scala group is dedicated to to providing a strong and vibrant community 
+		for software developers interested in the Scala language and ecosystem. Everyone is invited to participate.
+		If you're interested in becoming part of the Use.Scala group, please take a moment to follow our twitter account and/or subscribe to our Google Group. 
+		By registering with the site, you'll be notified about upcoming events along with any changes to the standard schedule.
+ 	</p>
+    
+    <h2>News</h2>
+    
+    <h3>
+    	First Use.Scala Monthly Meeting
+    	<div class='news-date'>Posted on Jun 25th, 2011</div>
+    </h3>
+    <p>Join us for the 1st Use.Scala meeting!</p>
+    <p>
+		<b>Location:</b> <br />
+		SendOutCards (our meeting host, thank you!)<br/>
+		1825 Research Way, Salt Lake City, UT <br />
+		See <a href='http://goo.gl/maps/E7li '>http://goo.gl/maps/E7li</a>
+	</p>
+	<p>
+		<b>Date/Time:</b><br/> 
+		Thursday, July 7, 2011 <br /> 
+	</p>
+	<p>
+		5:30pm  Pizza <br />
+		6-8pm   Organization discussion and Presentations (more info coming) <br />
+		If you haven't already, please register at <a href='http://www.surveymonkey.com/s/NGSH355'>http://www.surveymonkey.com/s/NGSH355</a>
+	</p>
+	<p>
+		See you there!<br/><br/>
+		Erik
+    </p>
+}

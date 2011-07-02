@@ -1,0 +1,10 @@
+.project
+.classpath
+.settings
+lib
+eclipse
+precompiled
+tmp
+*.log
+.scala_dependencies
+bin

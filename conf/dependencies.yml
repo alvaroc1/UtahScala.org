@@ -3,3 +3,11 @@
 require:
     - play
     - play -> scala 0.9.1
+    #- com.google.step2 -> step2-common 1-SNAPSHOT
+
+repositories:
+    - google-step2:
+        type:       http
+        artifact:   "http://code.google.com/p/step2/source/browse/code/java/maven/com/google/step2/step2-common/1-SNAPSHOT/step2-common-1-20100508.060600-10.jar"
+        contains:
+            - com.google.step2 -> *

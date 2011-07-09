@@ -8,3 +8,5 @@ tmp
 *.log
 .scala_dependencies
 bin
+modules
+logs

@@ -3,6 +3,7 @@
 require:
     - play
     - play -> scala 0.9.1
+    - play -> gae 1.4
     #- com.google.step2 -> step2-common 1-SNAPSHOT
 
 repositories:

@@ -13,9 +13,14 @@
     <body>
     	<div id='wrapper'>
     		<div id='top'>
-    			<!-- 
+    			<!--
     			<div style='float: right; background: #fa880c; padding: 2px 10px; -webkit-border-radius: 0 0 10px 10px; margin-top: -10px; color: white'>
-    				<a href='#'>Sign In</a> | Search: <input/></a>
+    				@if(!play.modules.gae.GAE.isLoggedIn) {
+    					<a href='@action(controllers.Site.login(""))'>Sign In</a>
+    				} else {
+    					Signed in as: @play.modules.gae.GAE.getUser.getEmail
+    					[<a href='@com.google.appengine.api.users.UserServiceFactory.getUserService.createLogoutURL(play.mvc.Http.Request.current().url)'>Sign Out</a>]
+    				}
     			</div>
     			-->
     			

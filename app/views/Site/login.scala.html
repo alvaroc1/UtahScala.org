@@ -1,0 +1,49 @@
+@main("Home", "home") {
+	<h2>Sign In</h2>
+	
+	<div id='signin'>
+		<table>
+			<tr>
+				<td>
+					@form(controllers.Site.login("")) {
+						<input type='hidden' name='openid' value='google.com/accounts/o8/id'>
+						<button class='signin'><img src='@asset("/public/images/google.png")'></button>
+					}
+				</td>
+				<td>
+					@form(controllers.Site.login("")) {
+						<input type='hidden' name='openid' value='yahoo.com'>
+						<button class='signin'><img src='@asset("/public/images/yahoo.png")'></button>
+					}
+				</td>
+				<td>
+					<button class='signin' onclick='$("#signin").hide(); $("#signin-googleapps").show()'><img src='@asset("/public/images/google_apps.png")'></button>
+				</td>
+			</tr>
+			<tr>
+				<td colspan='3'>
+					<a href='#' onclick='$("#signin").hide(); $("#signin-openid").show()'>Different OpenID provider? Click here.</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+	
+	<div id='signin-googleapps' style='display: none'>		
+		@form(controllers.Site.login("")) {
+			<div><label>GoogleApps Domain:</label></div>
+			<div>www.<input name='openid'><button type='submit'>Go</button> <a href='#' onclick='$("#signin-googleapps").hide(); $("#signin").show(); return false'>Cancel</a></div>
+		}
+	</div>
+	
+	<div id='signin-openid' style='display: none'>
+		@form(controllers.Site.login("")) {
+			<div><label>OpenID URL:</label></div>
+			<div>
+				<img src='@asset("/public/images/openid-large.png")' style='vertical-align: middle'/>
+				<input name='openid'>
+				<button type='submit'>Sign In</button> <a href='#' onclick='$("#signin-openid").hide(); $("#signin").show(); return false'>Cancel</a>
+			</div>
+		}
+		
+	</div>
+}

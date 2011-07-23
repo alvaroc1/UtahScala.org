@@ -1,0 +1,131 @@
+@main("Meetings", "meetings") {
+	<xml:group>
+
+	<h2>Upcoming Meetings</h2>
+	
+	@Html(
+		xml.Xhtml.toXhtml(
+			views.Site.meeting("Aug 4: SBT, Testing", List(
+				"5:30 Pizza, Un-conference, Lab pre-work assist" -> "",
+				"6:00 Flash Talks" -> List(
+					"- REPL and ScalaConsole" -> "Erik Peterson",
+					"- Unfiltered Web Intro" -> "Chris Hansen",
+					" - Functional Programming Terms" -> "Alvaro Carrasco"
+				),
+				"6:30 Mini-labs" -> List(
+					"- SBT" -> "Tim Stokes",
+					"- Scala Testing" -> "Erik Peterson"
+				),
+				"8:00 Go Code!" -> ""
+			))
+		)
+	)
+	
+	<hr/>
+	
+	@Html(
+		xml.Xhtml.toXhtml(
+			views.Site.meeting("Sep 1: Web Apps with Scala, Fight! =]", List(
+				"5:30 Pizza, Un-conference, Lab pre-work assist" -> "",
+				"6:00 Flash Talks" -> List(
+					"- Scalate Templates" -> "TBD",
+					"- Scalatra Web" -> "TBD"
+				),
+				"6:30 Mini-labs" -> List(
+					"- Spring with Scala" -> "TBD",
+					"- Lift" -> "Aaron Allred",
+					"- UseScala.org Play!ng in the cloud" -> "Alvaro Carrasco",
+					"- Unfiltered" -> "TBD",
+					"- Punk" -> "Tim Stokes"
+				),
+				"8:00 Go Code!" -> ""
+			))
+		)
+	)
+	
+	<hr/>
+	
+	@Html(
+		xml.Xhtml.toXhtml(
+			views.Site.meeting("Oct 6: Scala Database Access", List(
+				"5:30 Pizza and Unconference" -> "",
+				"6:00 Flash Talks" -> List(
+					"- Actors" -> "TBD",
+					"- Parser Combinators" -> "TBD",
+					"- CQRS and Event Sourcing" -> "Erik Peterson"
+				),
+				"6:30 Mini-labs" -> List(
+					"- Hibernate & JDBCTemplate" -> "TBD",
+					"- Squeryl" -> "TBD",
+					"- Anorm" -> "Alvaro Carrasco",
+					"- Casbah and Mongo" -> "Aaron Allred"
+				),
+				"8:00 Go Code!" -> ""
+			))
+		)	
+	)
+	
+	<hr/>
+
+	<h3>Nov 3: Scala Tools</h3>
+	<h4>Agenda</h4>
+	<dl>
+		<dd>
+			- Dependency Injection (Cake, Spring, Guice, OSGi)
+    		TBD
+			- Eclipse
+			- IntelliJ
+		</dd>
+	</dl>
+	
+	<hr/>
+	
+	<h2>Past Meetings</h2>
+   
+   	<h3>July 2011</h3>
+
+	<h4>Agenda</h4>
+	<dl>
+		<dt>5:30pm: Pizza and Chat</dt>
+        <dd>Video Selection</dd>
+
+		<dt>6:00pm: Use.Scala Launch</dt>
+        <dd>Erik Peterson</dd>
+
+		<dt>6:15pm: Scala is Here!</dt>
+        <dd>Erik Peterson</dd>
+
+		<dt>6:30pm: Scala 101: OO in the big, FP in the Small</dt>
+        <dd>Aaron Allred</dd>
+
+		<dt>7:30pm: Play! with Scala: Modern, Simple, Effective</dt>
+        <dd>Alvaro Carrasco</dd>
+
+		<dt>8:00pm: Wrap</dt>
+	</dl>
+
+	<h4>Presenter Bios</h4>
+
+	<p><b>Erik Peterson</b><br /> Erik is a Scala enthusiast, serial entrepreneur, and technologist with
+over 20 years experience delivering enterprise solutions.  He has
+great passion for bringing bright, capable hearts and minds together
+to create the future. Employed with LDS Church and consults part-time.
+MBA, Duke University; BSEE, Brigham Young University. Draper resident.
+	</p>
+	
+	<p><b>Aaron Allred</b><br /> Aaron has been a programmer, systems administrator, and Network Design
+Engineer throughout his I.T. career. Whatever the hat he has been
+known to wear it. Devoting all his coding to Scala in the last 8
+months, he has converted most of his projects and continues to be
+amazed by it's usability. Employed by SendOutCards. South Ogden
+resident</p>
+
+	<p><b>Alvaro Carrasco</b><br /> Alvaro is a programmer that loves building cool software. He is the
+creator of Gravity [https://ww.gravitydev.com/], a simple but powerful
+project management tool available through Google Apps Marketplace and
+the Chrome Webstore. He enjoys working with Scala, open source, and
+everything web-related. Native of Chile and Herriman resident.
+	</p>
+	
+	</xml:group>
+}

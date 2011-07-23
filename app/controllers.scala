@@ -38,8 +38,8 @@ object Site extends ScalaController {
     	html.calendar()
     }
     
-    def presentations = {
-    	html.presentations()
+    def meetings = {
+    	html.meetings()
     }
     
     def sponsors = {
